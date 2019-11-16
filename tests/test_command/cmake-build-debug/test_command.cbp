@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="test_command"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/aion/.CLionProjects/test_command/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/aion/.CLionProjects/test_command/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="/home/aion/.CLionProjects/test_command/cmake-build-debug/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aion/.CLionProjects/test_command/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aion/.CLionProjects/test_command/src/ed25519"/>
+					<Add directory="/home/aion/.CLionProjects/test_command/src/sha3"/>
+					<Add directory="/home/aion/.CLionProjects/test_command/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test/fast">
+				<Option output="/home/aion/.CLionProjects/test_command/cmake-build-debug/test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aion/.CLionProjects/test_command/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/aion/.CLionProjects/test_command/src/ed25519"/>
+					<Add directory="/home/aion/.CLionProjects/test_command/src/sha3"/>
+					<Add directory="/home/aion/.CLionProjects/test_command/src"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/aion/.CLionProjects/test_command/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aion/.CLionProjects/test_command/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/fe.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/fe.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/ge.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/ge.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/keypair.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/sc.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/sc.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/seed.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/sign.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/ed25519/verify.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/keys.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/keys.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/main.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/plaintext.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/plaintext.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/serial.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/serial.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/sha3/sha3.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/sha3/sha3.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/src/test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="/home/aion/.CLionProjects/test_command/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
