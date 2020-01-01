@@ -46,7 +46,8 @@ int main(int argc, char* argv[])
     test_generate();
     test_read_sm_pub_key();
     test_hashcode_command();
-    test_sign_command();
+    test_read_signa();
+    test_sm_sign_command();
     system_deinit();
 
     return 0;

@@ -13,15 +13,17 @@
 #ifndef CMD_HANDLER_H__
 #define CMD_HANDLER_H__
 
-#define KEYCORE_CMD_GET                 0x00
-#define KEYCORE_CMD_GET_VERSION         0x01
-#define KEYCORE_CMD_READ_PRO_STATUS     0x02
-#define KEYCORE_CMD_GET_ID              0x03
-#define KEYCORE_CMD_READ_DEVICE_PK      0x11
-#define KEYCORE_CMD_READ_HASHCODE       0x12
-#define KEYCORE_CMD_READ_SEC_PK         0x13
-#define KEYCORE_CMD_GENERATE            0x21
-#define KEYCORE_CMD_SIGN                0x31
+#define KEYCORE_CMD_GET                 (0x00)
+#define KEYCORE_CMD_GET_VERSION         (0x01)
+#define KEYCORE_CMD_READ_PRO_STATUS     (0x02)
+#define KEYCORE_CMD_GET_ID              (0x03)
+#define KEYCORE_CMD_READ_DEVICE_PK      (0x11)
+#define KEYCORE_CMD_READ_SEC_HASHCODE   (0x12)
+#define KEYCORE_CMD_READ_SEC_PK         (0x13)
+#define KEYCORE_CMD_READ_SEC_SIGNATURE  (0x14)
+#define KEYCORE_CMD_GENERATE            (0x21)
+#define KEYCORE_CMD_SEC_SIGN            (0x31)
+#define KEYCORE_CMD_DEV_SIGN            (0x32)
 
 #ifdef __cplusplus
 extern "C" {

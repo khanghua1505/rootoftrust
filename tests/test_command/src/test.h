@@ -22,8 +22,9 @@ bool test_get_version_command(void);
 bool test_get_id_command(void);
 bool test_read_dev_pub_key(void);
 bool test_hashcode_command(void);
+bool test_read_signa(void);
 bool test_generate(void);
 bool test_read_sm_pub_key(void);
-bool test_sign_command(void);
+bool test_sm_sign_command(void);
 
 #endif  // TEST_H__

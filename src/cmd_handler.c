@@ -187,6 +187,39 @@ static void handle_read_sec_pk(void)
 }
 
 /*
+ * Read Security Monitor Signature.
+ *
+ * The Read Security Monitor Signature command is used for reading the Security
+ * Monitor Signature (see Scure Boot documentation for more detail).
+ *
+ * note: Read Security Monitor Signature (or Read SM Public Key) command is valid, only if 
+ *       the Generate command was executed.
+ */
+static void handle_read_sec_signa(void)
+{
+    if (!keycore_keys_sec_isvalid()) {
+        /* The Security Monitor Public Key is not valid. */
+        /* Send a NACK byte and end of Read Security Monitor Signature. */
+        ksendc(NACK);
+        return;
+    }
+    else {
+        /* Else, send an ACK byte. 
+         * The command shall be executed.*/
+        ksendc(ACK);
+    }
+    
+    ksendc(sizeof(keycore_sec_signature) - 1);   /* Send the length of security monitor PK. */
+    ksendw((uint8_t *) &keycore_sec_signature,     /* Send Security Monitor PK. */
+            sizeof(keycore_sec_signature));
+    
+    /* Send an ACK byte and 
+     * end of Read SM Public Key. */
+    ksendc(ACK);             
+}
+ 
+
+/*
  * Generate command.
  *
  * The Generate command is used to generate the Hash Code (see in Read Hash Code command),
@@ -290,7 +323,7 @@ static void handle_generate(void)
  * are used for generating a signature in this command.
  */
 
-static void handle_sign(void)
+static void handle_sec_sign(void)
 {
   if (!keycore_keys_sec_key_isvalid()) { 
     /* The Security Monitor Public and Private Key is not valid */
@@ -424,17 +457,20 @@ void keycore_cmd_handler(void)
         case KEYCORE_CMD_READ_DEVICE_PK:
             handle_read_device_pk();
             break;
-        case KEYCORE_CMD_READ_HASHCODE:
+        case KEYCORE_CMD_READ_SEC_HASHCODE:
             handle_read_hashcode();
             break;
         case KEYCORE_CMD_READ_SEC_PK:
             handle_read_sec_pk();
             break;
+        case KEYCORE_CMD_READ_SEC_SIGNATURE:
+            handle_read_sec_signature();
+            break;
         case KEYCORE_CMD_GENERATE:
             handle_generate();
             break;
-        case KEYCORE_CMD_SIGN:
-            handle_sign();
+        case KEYCORE_CMD_SEC_SIGN:
+            handle_sec_sign();
             break;
         default:
             ksendc(NACK);

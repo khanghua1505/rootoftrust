@@ -18,6 +18,7 @@
 #define KEYCORE_DEV_PUB_KEY_SIZE        32
 #define KEYCORE_SM_HASHCODE_SIZE        64
 #define KEYCORE_SM_PUB_KEY_SIZE         32
+#define KEYCORE_SM_SIGNATURE_SIZE       64
 
 #ifndef __packed
 #define __packed        __attribute__((packed))

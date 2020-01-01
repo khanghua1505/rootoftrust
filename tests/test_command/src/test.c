@@ -28,8 +28,9 @@
 #define COMMAND_READ_DEV_PUB_KEY    0x11
 #define COMMAND_READ_SM_HASHCODE    0x12
 #define COMMAND_READ_SM_PUB_KEY     0x13
+#define COMMAND_READ_SM_SIGNATURE   0x14
 #define COMMAND_GENERATE            0x21
-#define COMMAND_SIGN                0x31
+#define COMMAND_SM_SIGN             0x31
 
 static unsigned char m_buffer[256];
 
@@ -99,7 +100,7 @@ bool test_get_command(void)
             case COMMAND_GENERATE:
                 printf(" - Generate command\n");
                 break;
-            case COMMAND_SIGN:
+            case COMMAND_SM_SIGN:
                 printf(" - Sign command\n");
                 break;
             default:
@@ -238,6 +239,37 @@ bool test_hashcode_command(void)
     return true;
 }
 
+bool test_read_signa(void)
+{
+    ksendc(COMMAND_READ_SM_SIGNATURE);
+    ksendc(~COMMAND_READ_SM_SIGNATURE);
+
+    if (ACK != kreceivec()) {
+        printf("Test Read SM Signature command failed\n");
+        return false;
+    }
+
+    uint8_t N = kreceivec();
+    kreceivew(m_buffer, N + 1);
+
+    printf("Test Read SM Signature command result:\n");
+    printf(" - Value read: ");
+    for (int i = 0; i < N+1; i++) {
+        printf("0x%2x ", m_buffer[i]);
+    }
+    printf("\n");
+    printf(" - Compare to SM Signature... ");
+    for (int i = 0; i < KEYCORE_SM_SIGNATURE_SIZE; i++) {
+        if (m_buffer[i] != keycore_sec_signature.value[i]) {
+            printf("failed\n");
+            return false;
+        }
+    }
+    printf("OK\n");
+
+    return true;
+}
+
 bool test_generate(void)
 {
     ksendc(COMMAND_GENERATE);
@@ -345,10 +377,10 @@ bool test_read_sm_pub_key(void)
     return true;
 }
 
-bool test_sign_command(void)
+bool test_sm_sign_command(void)
 {
-    ksendc(COMMAND_SIGN);
-    ksendc(~COMMAND_SIGN);
+    ksendc(COMMAND_SM_SIGN);
+    ksendc(~COMMAND_SM_SIGN);
 
     if (ACK != kreceivec()) {
         printf("Test Sign command failed\n");
